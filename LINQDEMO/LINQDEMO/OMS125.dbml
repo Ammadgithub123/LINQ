@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="OMS233" Class="OMS125DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-CSQNJOV;Initial Catalog=OMS233;Integrated Security=True;Encrypt=False" SettingsObjectName="LINQDEMO.Properties.Settings" SettingsPropertyName="OMS233ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContactNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Customer_Order" Member="Orders" ThisKey="Id" OtherKey="CustomerId" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderDetail" Member="OrderDetails">
+    <Type Name="OrderDetail">
+      <Column Name="OrderId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PorductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrderQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Order_OrderDetail" Member="Order" ThisKey="OrderId" OtherKey="Id" Type="Order" IsForeignKey="true" />
+      <Association Name="Product_OrderDetail" Member="Product" ThisKey="PorductId" OtherKey="Id" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Order">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CustomerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Order_OrderDetail" Member="OrderDetails" ThisKey="Id" OtherKey="OrderId" Type="OrderDetail" />
+      <Association Name="Customer_Order" Member="Customer" ThisKey="CustomerId" OtherKey="Id" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="AvailableQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Product_OrderDetail" Member="OrderDetails" ThisKey="Id" OtherKey="PorductId" Type="OrderDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product13" Member="Product13s">
+    <Type Name="Product13">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="AvailableQuantity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

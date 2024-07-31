@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1831
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQDEMO", "LINQDEMO\LINQDEMO.csproj", "{E81245A7-969A-4C0C-BF24-0E8AABB1D966}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup22", "Setup22\Setup22.vdproj", "{5831FA22-1C13-490F-ACE3-D23158589465}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup125", "..\Setup125\Setup125.vdproj", "{7F51DD01-794E-42B8-9214-973C9FB905F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E81245A7-969A-4C0C-BF24-0E8AABB1D966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E81245A7-969A-4C0C-BF24-0E8AABB1D966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E81245A7-969A-4C0C-BF24-0E8AABB1D966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E81245A7-969A-4C0C-BF24-0E8AABB1D966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5831FA22-1C13-490F-ACE3-D23158589465}.Debug|Any CPU.ActiveCfg = Debug
+		{5831FA22-1C13-490F-ACE3-D23158589465}.Release|Any CPU.ActiveCfg = Release
+		{7F51DD01-794E-42B8-9214-973C9FB905F3}.Debug|Any CPU.ActiveCfg = Debug
+		{7F51DD01-794E-42B8-9214-973C9FB905F3}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF68E3FF-1D51-418A-BCE8-B952AEF108ED}
+	EndGlobalSection
+EndGlobal

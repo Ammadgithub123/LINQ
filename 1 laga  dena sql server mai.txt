@@ -1,0 +1,1 @@
+LINQ ka concept par SQL SERVER mai Customer ko Customer1 kardena auur dosrai bhi
